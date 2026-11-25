@@ -11,7 +11,10 @@ from langchain_openai import ChatOpenAI
 from langsmith import traceable,get_current_run_tree
 from langchain_core.callbacks import BaseCallbackHandler
 import threading
+<<<<<<< HEAD
 import mlflow
+=======
+>>>>>>> afa54285879c9934f132cfce60228967bd595849
 
 load_dotenv()
 
@@ -28,14 +31,23 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 BACKEND_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = PROJECT_ROOT / "data"
 VECTOR_DB_PATH = PROJECT_ROOT / "vectordb"
+<<<<<<< HEAD
 os.makedirs(VECTOR_DB_PATH, exist_ok=True)
+=======
+>>>>>>> afa54285879c9934f132cfce60228967bd595849
 
 LOG_DIR = PROJECT_ROOT / "logs"
 os.makedirs(LOG_DIR, exist_ok=True)
 
+<<<<<<< HEAD
 
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
 PROTOCOL_DOCUMENT_PATH = DATA_DIR
+=======
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
+PROTOCOL_DOCUMENT_PATH = DATA_DIR
+VECTOR_DB_PATH = os.getenv("VECTOR_DB_PATH")
+>>>>>>> afa54285879c9934f132cfce60228967bd595849
 CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "1000"))
 CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "150"))
 TOP_K = int(os.getenv("TOP_K", "4"))
@@ -242,7 +254,10 @@ class Settings:
     log_dir: str = str(LOG_DIR)
     model: str = MODEL
     vector_db_path: str = VECTOR_DB_PATH
+<<<<<<< HEAD
     data_dir: str = DATA_DIR
+=======
+>>>>>>> afa54285879c9934f132cfce60228967bd595849
     protocol_document_path: str  = PROTOCOL_DOCUMENT_PATH
     embedding_model: str = EMBEDDING_MODEL
     chunk_size: int = CHUNK_SIZE
@@ -292,7 +307,10 @@ class Settings:
         return client
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> afa54285879c9934f132cfce60228967bd595849
 class LoggerManager:
     @staticmethod
     def info(message: str):
