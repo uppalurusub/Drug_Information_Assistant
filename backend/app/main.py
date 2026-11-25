@@ -4,11 +4,8 @@ from contextlib import asynccontextmanager
 from app.config.settings import settings
 logger = settings.get_logger()
 
-<<<<<<< HEAD
 log_dir = settings.log_dir
 
-=======
->>>>>>> afa54285879c9934f132cfce60228967bd595849
 from app.routers.drug_router import (
     router as drug_router
 )
@@ -21,11 +18,7 @@ from app.routers.drug_router import (
 logger.remove()
 
 logger.add(
-<<<<<<< HEAD
     sink=f"{log_dir}/drug_information_assistant.log",
-=======
-    sink="logs/drug_information_assistant.log",
->>>>>>> afa54285879c9934f132cfce60228967bd595849
     rotation="10 MB",
     retention="30 days",
     level="INFO",

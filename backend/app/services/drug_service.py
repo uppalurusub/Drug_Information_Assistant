@@ -9,28 +9,15 @@ from app.implementations.drug_impl import DrugImplementation
 from app.schemas.response_model import DrugResponse
 
 mlflow.set_tracking_uri(os.getenv("MLFLOW_TRACKING_URI", "http://localhost:5000"))
-<<<<<<< HEAD
 mlflow.set_experiment(os.getenv("MLFLOW_EXPERIMENT_NAME", "Drug_Information_Assistant"))
-=======
-mlflow.set_experiment(os.getenv("MLFLOW_EXPERIMENT_NAME", "Drug_Information_Assistant_Interface"))
->>>>>>> afa54285879c9934f132cfce60228967bd595849
 
 
 class DrugService:
     def __init__(self):
         self.drug_impl = DrugImplementation()
 
-<<<<<<< HEAD
     @mlflow.trace(name="Drug_Information_Assistant")
     
-=======
-    @traceable(
-        name="drug-information-api-workflow",
-        run_type="chain",
-        tags=["healthcare", "drug-information", "fastapi", "openrouter"],
-        metadata={"application": "Drug Information Assistant"},
-    )
->>>>>>> afa54285879c9934f132cfce60228967bd595849
     def get_drug_information(self, drug_name: str) -> DrugResponse:
         started = time.perf_counter()
         start_time = datetime.now()

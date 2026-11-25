@@ -32,18 +32,10 @@ from langchain_chroma import (
 # Constants
 # --------------------------------------------------
 
-<<<<<<< HEAD
 VECTOR_DB_PATH = settings.vector_db_path
 
 DRUG_DATA_FILE = (
-    #"../data/drugs.txt"
     settings.data_dir
-=======
-VECTOR_DB_PATH = "vector_db"
-
-DRUG_DATA_FILE = (
-    "../data/drugs.txt"
->>>>>>> afa54285879c9934f132cfce60228967bd595849
 )
 
 @lru_cache(maxsize=1)
